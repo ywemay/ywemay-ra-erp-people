@@ -4,8 +4,12 @@ import {
 } from "react-admin";
 import { Form, transform } from "./Form";
 
-import { ContactsEditList } from "@/views/contacts/edit/list/List";
-import { contacts_resource, resource } from '../'
+import {
+  ContactsEditList, 
+  contacts_resource, 
+  resource 
+}
+from "ywemay-ra-erp-contacts";
 
 export function ContactsEdit () {
   const { id: person_id} = useRecordContext();

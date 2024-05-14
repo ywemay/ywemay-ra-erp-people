@@ -1,6 +1,0 @@
-export * from './list'
-export * from './edit'
-export * from './show'
-export * from './lang'
-export * from './icon'
-export * from './resource'

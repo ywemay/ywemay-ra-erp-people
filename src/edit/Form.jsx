@@ -2,8 +2,7 @@ import {
   SimpleForm,
   TextInput,
 } from "react-admin";
-import { CustomerReferenceInput } from "@/views/customers";
-import { GenderSelectInput } from "ywemay-ra-erp";
+import { GenderSelectInput } from "ywemay-ra-erp-contacts";
 
 export const transform = ({id, ...data}) => {
   return data
@@ -16,9 +15,6 @@ export function Form(props) {
         label="people.full_name"
         source="full_name"
         fullWidth
-        />
-      <CustomerReferenceInput 
-        className="w-full" 
         />
     </div>
     <div className="flex flex-row w-full gap-2 justify-evenly">
