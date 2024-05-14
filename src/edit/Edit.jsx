@@ -3,21 +3,17 @@ import {
   useRecordContext
 } from "react-admin";
 import { Form, transform } from "./Form";
-
-import {
-  ContactsEditList, 
-  contacts_resource, 
-  resource 
-}
-from "ywemay-ra-erp-contacts";
+import { EditList } from "ywemay-ra-erp-contacts";
+import { resource } from '../resource'
+import { Card } from 'ywemay-ra-erp'
 
 export function ContactsEdit () {
   const { id: person_id} = useRecordContext();
-  return <ContactsEditList 
-    resource={contacts_resource}
+  return <EditList 
+    resource="people_contacts"
     filter={{person_id}}
     sort={{field: 'contact_type', order: 'ASC'}} 
-    />
+  />
 }
 
 export function Edit({form, ...props}) {
@@ -27,6 +23,8 @@ export function Edit({form, ...props}) {
     {...props}
     >
       <Form {...form} />
-      <ContactsEdit />
+      <Card style={{padding: '6pt'}}>
+        <ContactsEdit />
+        </Card>
     </RAEdit>
 }

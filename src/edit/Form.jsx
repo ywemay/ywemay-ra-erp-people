@@ -2,7 +2,7 @@ import {
   SimpleForm,
   TextInput,
 } from "react-admin";
-import { GenderSelectInput } from "ywemay-ra-erp-contacts";
+import { GenderSelectInput } from "ywemay-ra-erp-inputs";
 
 export const transform = ({id, ...data}) => {
   return data

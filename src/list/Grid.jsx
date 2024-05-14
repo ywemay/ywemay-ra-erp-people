@@ -1,5 +1,4 @@
 import {
-  InfiniteList as List,
   TextField,
   ArrayField,
   SingleFieldList,

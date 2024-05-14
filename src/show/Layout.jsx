@@ -3,10 +3,9 @@ import {
   TextField,
   useShowContext,
 } from "react-admin";
-import { GenderSelectField } from 'ywemay-ra-erp-contacts'
+import { GenderSelectField } from 'ywemay-ra-erp-fields'
 import { CustomerReferenceField } from 'ywemay-ra-erp';
 import { List as Contacts } from "ywemay-ra-erp-contacts";
-import { contacts_resource } from 'ywemay-ra-erp-contacts'
 import { CardIcon } from "../icon";
 
 function MainInfo() {
@@ -25,7 +24,6 @@ function MainInfo() {
         source="job"
         />
       <GenderSelectField />
-      {contacts_resource}
     </SimpleShowLayout>
   </div>
 }
@@ -38,7 +36,7 @@ export function Layout(props) {
       className="w-full"
       filter={{ person_id: record.id }}
       disableSuncWithLocation
-      resource={contacts_resource}
+      resource="people_contacts"
       exporter={false}
       grid={{ bulkActionButtons: false, exporter: false }}
       /> }
