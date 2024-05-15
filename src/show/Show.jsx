@@ -1,28 +1,23 @@
 import { 
-  EditButton,
+  // EditButton,
   Show as RAShow,
-  TopToolbar,
-  useRecordContext,
+  // TopToolbar,
+  // useRecordContext,
+  TextField,
 } from "react-admin";
+import { GenderSelectField } from 'ywemay-ra-erp-fields/src/GenderSelectField'
+// import { Layout } from "./Layout";
 
-import { Layout } from "./Layout";
+// function Actions () {
+//   const record = useRecordContext() || {};
+//   const canEdit = (record.orders_count + record.proposals_count === 0)
+//   if (!canEdit) return null;
+//   return <TopToolbar> <EditButton /> </TopToolbar>
+// }
 
-function Actions () {
-  const record = useRecordContext() || {};
-  const canEdit = (record.orders_count + record.proposals_count === 0)
-  if (!canEdit) return null;
-  return <TopToolbar> <EditButton /> </TopToolbar>
-}
-
-export function Show({ layout, ...params }) {
-  return <RAShow {...params}
-    queryOptions={{
-      meta: {
-        columns: '*;customers(orders_count, proposals_count)'
-      }
-    }}
-    actions={<Actions />}
-  >
-    <Layout />
+export function Show(params) {
+  return <RAShow {...params} >
+    <TextField source="full_name" />
+    <GenderSelectField />
   </RAShow>
 }

@@ -2,5 +2,5 @@
 // export * from './src/edit'
 // export * from './src/show'
 // export * from './src/lang'
-// export * from './src/icon'
+export * from './src/icon'
 export * from './src/resource'
